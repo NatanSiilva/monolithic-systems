@@ -1,4 +1,3 @@
-
 import Address from "../../../@shared/domain/value-object/address";
 import Id from "../../../@shared/domain/value-object/id.value-object";
 import Client from "../domain/client.entity";
@@ -35,14 +34,14 @@ export default class ClientRepository implements ClientGateway {
             name: client.name,
             email: client.email,
             document: client.document,
-            address: new Address(
-                client.street,
-                client.number,
-                client.complement,
-                client.city,
-                client.state,
-                client.zipcode
-            ),
+            address: new Address({
+                street: client.street,
+                number: client.number,
+                complement: client.complement,
+                city: client.city,
+                state: client.state,
+                zipCode: client.zipcode,
+            }),
             createdAt: client.createdAt,
             updatedAt: client.createdAt,
         });

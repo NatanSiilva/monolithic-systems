@@ -39,14 +39,14 @@ describe("Client Adm Facade test", () => {
             name: "Lucian",
             email: "lucian@xpto.com",
             document: "1234-5678",
-            address: new Address(
-                "Rua 123",
-                "99",
-                "Casa Verde",
-                "Criciúma",
-                "SC",
-                "88888-888"
-            ),
+            address: new Address({
+                street: "Rua 123",
+                number: "99",
+                complement: "Casa Verde",
+                city: "Criciúma",
+                state: "SC",
+                zipCode: "88888-888",
+            }),
         };
 
         await facade.add(input);
@@ -78,14 +78,14 @@ describe("Client Adm Facade test", () => {
             name: "Lucian",
             email: "lucian@xpto.com",
             document: "1234-5678",
-            address: new Address(
-                "Rua 123",
-                "99",
-                "Casa Verde",
-                "Criciúma",
-                "SC",
-                "88888-888"
-            ),
+            address: new Address({
+                street: "Rua 123",
+                number: "99",
+                complement: "Casa Verde",
+                city: "Criciúma",
+                state: "SC",
+                zipCode: "88888-888",
+            }),
         };
 
         await facade.add(input);

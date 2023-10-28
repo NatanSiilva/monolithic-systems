@@ -5,7 +5,6 @@ import Id from "../../../@shared/domain/value-object/id.value-object";
 import Address from "../../../@shared/domain/value-object/address";
 import ClientRepository from "./client.repository.";
 
-
 describe("Client Repository test", () => {
     let sequelize: Sequelize;
 
@@ -31,14 +30,14 @@ describe("Client Repository test", () => {
             name: "Lucian",
             email: "lucian@teste.com",
             document: "1234-5678",
-            address: new Address(
-                "Rua 123",
-                "99",
-                "Casa Verde",
-                "Criciúma",
-                "SC",
-                "88888-888"
-            ),
+            address: new Address({
+                street: "Rua 123",
+                number: "99",
+                complement: "Casa Verde",
+                city: "Criciúma",
+                state: "SC",
+                zipCode: "88888-888",
+            }),
         });
 
         const repository = new ClientRepository();
