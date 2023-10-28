@@ -14,7 +14,9 @@
   },
   "scripts": {
     "test": "npm run tsc -- --noEmit && jest",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "server": "nodemon src/infra/api/server.ts"
+
   },
   "dependencies": {
     "@types/express": "^4.17.13",

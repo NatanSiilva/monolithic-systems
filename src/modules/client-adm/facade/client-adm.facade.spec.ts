@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize-typescript";
-import { ClientModel } from "../repository/client.model";
+import ClientModel from "../repository/client.model";
 import AddClientUseCase from "../usecase/add-client/add-client.usecase";
 import Address from "../../../@shared/domain/value-object/address";
 import ClientRepository from "../repository/client.repository.";

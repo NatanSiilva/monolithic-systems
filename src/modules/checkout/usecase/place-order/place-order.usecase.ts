@@ -57,14 +57,13 @@ export default class PlaceOrderUseCase implements UseCaseInterface {
             id: new Id(client.id),
             name: client.name,
             email: client.email,
-            address: new Address({
-                street: client.address.street,
-                number: client.address.number,
-                complement: client.address.complement,
-                city: client.address.city,
-                state: client.address.state,
-                zipCode: client.address.zipCode,
-            }),
+            document: client.document,
+            street: client.address.street,
+            number: client.address.number,
+            complement: client.address.complement,
+            city: client.address.city,
+            state: client.address.state,
+            zipCode: client.address.zipCode,
         };
 
         // criar o objeto do client

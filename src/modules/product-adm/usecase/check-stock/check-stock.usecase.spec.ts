@@ -1,10 +1,9 @@
 import Id from "../../../../@shared/domain/value-object/id.value-object";
 import Product from "../../domain/product.entity";
 import ProductAdmFacadeFactory from "../../factory/facade.factory";
-import { ProductModel } from "../../repository/product.model";
+import ProductModel from "../../repository/product.model";
 import CheckStockUseCase from "./check-stock.usecase";
 import { Sequelize } from "sequelize-typescript";
-
 
 const product = new Product({
     id: new Id("1"),
