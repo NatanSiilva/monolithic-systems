@@ -22,7 +22,7 @@ export default class Order extends BaseEntity {
         this._status = props.status || "pending";
     }
 
-    approve(): void {
+    approved(): void {
         this._status = "approved";
     }
 
